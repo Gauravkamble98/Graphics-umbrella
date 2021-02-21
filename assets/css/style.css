@@ -1,0 +1,767 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 57%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+header {  background-color: #f8f8f8; }
+
+.pullme{
+  position: absolute;
+  right:3%;
+  top: 0;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.pullme i { color: #a0be5e; }
+
+header .wrapper{
+position: relative;
+padding: 23px;
+display: flex;
+justify-content: space-between;
+}
+
+.logo{
+  position: relative;
+  width: 40%;
+}
+
+.logo a i{
+  font-size: 38px;
+  color: #a0be5e;
+  display: inline-block
+}
+
+.logo h1 .comapny-head{
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  left:37px;
+  top: 0;
+  letter-spacing: 0;
+}
+
+#color { color:#a0be5e; }
+
+.logo  h1 .sub-head{
+  cursor: pointer;
+  position: absolute;
+  left:37px;
+  margin-top: 26px;
+  font-size: 15px;
+  color: #9b9b9b;
+}
+
+.navbar { margin-left: 100px; }
+.navbar li { padding-top: 10px; }
+
+.navbar a{
+  margin-right: 28px;
+  color: #4b4a4ada;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.navbar a:hover{
+  color: #a0be5e;
+}
+
+.navbar .lastchild{
+  margin-right: 0;
+}
+
+label #sign-one,
+label #sign-two{
+  font-size: 30px;
+  color: #000;
+  float: right;
+  line-height: 100px;
+  margin-right: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+#res-menu{
+  display: none;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+/* banner section start  */
+.banner-section{
+  background-color: #a0c63f;
+}
+
+.banner-section .wrapper{
+  width: 86%;
+  height: 336px;
+  position: relative;
+}
+
+.active-slide img {
+  display: none;
+  position: absolute;
+width: 361px;  
+height: 253px; 
+left: 200px;
+}
+
+.slide { display: none; }
+
+.active-slide h2{
+  font-size: 24px;
+  text-align: center;
+  width: 33%;
+  position: absolute;
+  line-height: 30px;
+  color: #fff;
+  right: 18%;
+  top: 20%;
+}
+
+.arrows{
+  cursor: pointer;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-color: #000;
+  position: absolute;
+  top: 50%;
+  border-radius: 50px;
+  border: 3px solid #fff; 
+}
+
+.arrows:hover { color: #a0be5e; }
+
+.prev{
+  left: 10px;
+  color: #fff;
+  font-size: 25px;
+}
+
+   
+.next{
+  right: 10px;
+  color: #fff;
+  font-size: 25px;
+}
+/* banner css done  */
+
+/* welcome section start  */
+.welcome-section{
+  padding-top: 28px;
+  padding-bottom: 42px;
+  background-color: #f5f5f5;
+}
+
+.welcome-section h2{
+   font-size: 23px;
+   letter-spacing: 2px;
+   border-bottom: 1px dashed grey;
+   padding-bottom: 32px;
+}
+
+.welcome-section h2 span { color: #a0be5e; }
+
+.welcome-support{
+  display: flex;
+  margin-top: 32px;
+  justify-content: space-between;
+}
+
+ .facilities{
+   text-align: center;
+   width: 20%;
+ }
+
+ .facilities img{
+  border: 12px solid white;
+  width: 122px;
+  height: 122px;
+  border-radius: 100px;
+ }
+
+ .facilities h2{
+   margin-top: 12px;
+   letter-spacing: 1px;
+   font-weight: 500;
+   border: none;
+ }
+
+ .facilities span{
+   margin-top: 10px;
+   font-size: 15px;
+   font-weight: 600;
+   color: #9b9b9b;
+ }
+ /* welcome css done  */
+
+ /* portfolio section start  */
+ 
+ .portfolio-section{
+  background-color: #f5f5f5;
+  height: auto;
+}
+
+.portfolio-section h3{
+  letter-spacing: 1px;
+  margin-left: 27px;
+  color:#4b4a4ada;
+}
+
+.portfolio-section h3 span { color:#a0be5e; }
+
+.cards{
+   display: grid;
+   grid-template-columns: 370px 370px;
+   grid-gap: 20px;
+   grid-template-rows: 120px 120px;
+   margin-top: 32px;
+}
+
+.business-card{
+  background-color: #fff;
+} 
+
+.business-card figure{
+    float: left;
+}
+
+.business-card img{
+    width: 170px;
+    height: 120px;
+}
+
+.content{
+    margin:10px 0 0 181px;
+}
+
+.content h4{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+  .content a{
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 0 9px;
+    margin-right: 5px;
+    background-color: #90b93a;
+    color: #fff;
+ }
+
+ .content a:hover{
+   color: #90b93a;
+   background-color: rgba(255, 255, 255, 0.699);
+   border: 1px dotted grey;
+ }
+
+  .content p{
+    margin-top: 10px;
+    font-size: 10px;
+ }
+
+  /* advertiser section start  */
+  .advertiser-section{
+    padding-top: 42px;
+    background-color: #f5f5f5;
+  }
+
+  .advertiser-section h5{
+    letter-spacing: 1px;
+    margin-left: 27px;
+    color:#4b4a4ada;
+  }
+
+  .advertiser-section h5 span { color:#a0be5e; }
+
+
+  .advertiser-section .sponser{
+    display: flex;
+    margin-top: 31px;
+    padding-bottom: 82px;
+  }
+
+  .advertiser-section .sponser-img { width: 120%; }
+  .advertiser-section .sponser-img img{ width: 155%; }
+/* advertiser section done  */
+
+/* contact us section start  */
+ .contact-us{
+   padding-top: 30px;
+   padding-bottom: 29px;
+ }
+
+ .contact-us .wrapper{
+   display: flex;
+   justify-content: space-between;
+ }
+
+.about-us { width: 25%; }
+
+.about-us h5 {
+   font-size: 14px;
+   color: #818080;
+   font-weight: 600;
+ }
+
+.about-us p{
+   font-size: 12px;
+   color: #9b9b9b;
+   margin-top: 18px;
+ }
+
+.about-us span{
+   margin-top: 20px;
+   font-size: 14px;
+   color: #818080;
+   font-weight: 600; 
+ }
+
+.about-us i{
+  color: #818080;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.about-us i:hover { color: #a0be5e; }
+
+.about-us .title{
+  display: none;
+  color: #818080;
+}
+
+.archives h5{
+  font-size: 14px;
+  color: #818080;
+  font-weight: 600;
+}
+
+.archives li { border-bottom: 1px dotted grey; }
+.archives li a{ color: #818080; }
+
+.archives .dates{
+  display: block;
+  margin-top: 18px;
+  font-size: 10px;
+  border-bottom: 1px dotted grey;
+}
+
+.contact li { display: block; }
+ .contact i { font-size: 19px;}
+
+.contact h5{
+  font-size: 14px;
+  color: #818080;
+  font-weight: 600;
+}
+
+.contact .contact-info{
+  margin-top: 18px;
+  font-size: 10px;
+}
+
+.contact-info a { color: #818080; }
+.contact-info a:hover { color: #a0be5e; }
+
+ .signin h5{
+  font-size: 14px;
+  color: #818080;
+  font-weight: 600;
+ }
+
+ .signin input{
+   margin-top: 18px;
+   border:none;
+   background-color: #fafafa;
+   height: 30px;
+   border-bottom: 1px solid rgb(204, 199, 199);
+ }
+
+ .signin .subscribe{
+   margin-top: 18px;
+   background-color: #a0be5e;
+   color: #fff;
+   font-size: 12px;
+   padding: 5px 5px;
+ }
+
+ .signin .subscribe:hover{
+   background-color: #fff;
+   color: #a0be5e;
+ }
+ /* contact css done  */
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+footer{
+  background-color: #202020;
+  padding: 5px;
+}
+ 
+footer .wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a{
+  font-size: 10px;
+  font-weight: 600;
+  margin-right: 2px;
+  color: #b8b3b3;
+}
+
+footer a:hover { color: #a0be5e; }
+
+footer span{
+  font-weight: 600;
+  color: #b8b3b3;
+  font-size: 12px;
+  display: block;
+}
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media screen and (max-width: 1310px) {
+  header .wrapper{
+    justify-content: start;
+  }
+  label #sign-one{
+    display: block;
+  }
+
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #a0be5e;
+    top: 90px;
+    left: -180%;
+    text-align: center;
+    transition: .5s;
+    z-index: 10;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a{
+    font-size: 20px;
+  }
+
+  #res-menu:checked ~ ul{
+    left: 0;
+  }
+
+  #res-menu:checked ~ label #sign-one{
+    display: none;
+  }
+
+  #res-menu:checked ~ label #sign-two{
+    display: block;
+  }
+ 
+  .navbar {margin-left: 0;}
+  .navbar a:hover{
+    color: #fff;
+  }
+
+@media screen and (max-width: 1310px) {
+  .comapny-head{
+    text-align: center;
+    width: auto;
+    font-size: 18px;
+  }
+
+  .sub-head { display: none;}
+}
+
+/* banner section start  */
+@media screen and (max-width: 1190px) {
+  .active-slide h2{
+    font-size:19px ;
+    text-align: center;
+    right: 28%;
+  }
+}
+  @media screen and (max-width: 768px){
+    
+    .active-slide h2{
+      font-size:15px ;
+      text-align: center;
+      right: 32%;
+    }
+  }
+
+  /* welcome section  */
+  @media screen and (max-width: 1295px) {
+    .welcome-section { width: 100%; }
+
+    .welcome-section h2{
+      text-align: center;
+      font-size: 18px;
+      letter-spacing: 2px;
+      }
+    }
+
+    @media screen and (max-width: 1072px) {
+      .welcome-section h2{
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 2px;
+        }
+      }
+
+      @media screen and (max-width: 950px){
+        .welcome-support{
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+
+        .facilities{
+          text-align: center;
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        .facilities img{
+          border: 12px solid white;
+          width: 122px;
+          height: 122px;
+          border-radius: 100px;
+         }
+      }
+
+      @media screen and (max-width: 470px){    
+        .facilities img{
+          border: 12px solid white;
+          width: 122px;
+          height: 122px;
+          border-radius: 100px;
+        }
+      }
+
+      /* portfolio section  */
+
+      @media screen and (max-width:1047px){
+        .cards{
+            display:flex;
+            flex-direction: column;
+        }
+      }
+    
+      @media screen and (max-width:460px){
+        .business-card figure{
+            float: none;
+        }
+
+        .portfolio-section h3{
+          text-align: center;
+          font-size: 10px;
+        }
+        .business-card img{
+          width: 100%;
+        }
+        .content{
+          text-align: center;
+            margin-left: 0px;
+      }
+    }
+
+/* advertiser section  */
+@media screen and (max-width:1321px) and (min-width:989px){
+  .advertiser-section h5{
+    letter-spacing: 2px;
+    margin-left: 22px;
+    font-size: 16px;
+    color:#4b4a4ada;
+  }
+
+  .advertiser-section .sponser{
+    display: flex;
+    margin-top: 25px;
+    padding-bottom: 70px;
+  }
+
+  .advertiser-section .sponser-img img { width: 115%; }
+}
+
+@media screen and  (max-width:989px){
+  .advertiser-section .sponser{
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .advertiser-section h5 { text-align: center; }
+  .advertiser-section .sponser-img img { width: 85%; }
+}
+
+@media screen and  (max-width:534px){
+  .advertiser-section .sponser { padding-bottom: 52px; }
+
+  .advertiser-section h5{
+    text-align: center;
+    font-size: 15px;
+  }
+}
+/* advertiser section done  */
+
+/* contact us section  */
+@media screen and  (max-width:768px){
+  .contact-us .wrapper{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-us{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }  
+
+  .archives{
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .contact{
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .signin { margin-top: 20px; } }
+
+/* contact section done  */
+
+/* footer section start  */
+@media screen and  (max-width:768px){
+  footer .wrapper{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer span { margin-top: 20px; } }
+
+@media screen and  (max-width:768px){
+  footer a { font-size: 8px; } }
